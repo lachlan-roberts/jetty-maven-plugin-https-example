@@ -60,6 +60,9 @@
                 <artifactId>jetty-maven-plugin</artifactId>
                 <version>9.4.31.v20200723</version>
                 <configuration>
+                  <!-- Use the <jettyXml> option with jetty:run -->
+                  <jettyXml>etc/jetty.xml,etc/jetty-ssl.xml,etc/jetty-ssl-context.xml,etc/jetty-https.xml</jettyXml>
+                  <!-- OR use the <jettyBase> option jetty:run-distro -->
                   <jettyBase>test-base</jettyBase>
                 </configuration>
             </plugin>
